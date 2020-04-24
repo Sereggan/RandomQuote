@@ -1,3 +1,5 @@
 # RandomQuote
 Генератор рандомных цитат
-MEVN stack
+Vue+Firebase  
+Доступен по ссылке  
+http://randomquotevueapp.s3-website.eu-north-1.amazonaws.com/
