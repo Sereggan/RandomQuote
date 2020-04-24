@@ -33,8 +33,7 @@ export default {
 <style>
 .main {
   font-family: "Arizonia", cursive;
-
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #6e6e6e;
   width: 100%;
   border: 1px solid lightgray;
@@ -61,5 +60,18 @@ export default {
 
 .button:hover {
   cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .main {
+    font-size: 2em;
+  }
+  .main-text {
+    font-size: 1.5em;
+  }
+  .button {
+    font-size: 1.5rem;
+    float: none;
+    width: 80%;
+  }
 }
 </style>

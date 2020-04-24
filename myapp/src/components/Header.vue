@@ -41,7 +41,9 @@ export default {};
 li {
   list-style: none;
 }
-
-li:hover {
+@media (max-width: 1000px) {
+  .header__nav__item {
+    width: 45%;
+  }
 }
 </style>

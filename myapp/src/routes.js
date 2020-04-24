@@ -3,5 +3,6 @@ import AddQuote from "./components/AddQuote.vue";
 
 export const routes = [
   { path: "/", component: Main },
-  { path: "/addQuote", component: AddQuote }
+  { path: "/addQuote", component: AddQuote },
+  { path: "*", redirect: "/" }
 ];

@@ -35,4 +35,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 1000px) {
+  .container {
+    min-width: 100%;
+    font-size: 20px;
+  }
+}
 </style>
