@@ -33,16 +33,10 @@ export default new Vuex.Store({
         });
     },
     addQuote({ commit }, newQuote) {
-      axios
-        .post("https://randomquotesapp.firebaseio.com/quotes.json", newQuote)
-        .then(
-          response => {
-            console.log(response);
-          },
-          error => {
-            console.log(error);
-          }
-        );
+      axios.post(
+        "https://randomquotesapp.firebaseio.com/quotes.json",
+        newQuote
+      );
     }
   },
   getters: {

@@ -16,9 +16,9 @@
     <div class="col-xs-offset-9">
       <button
         class="btn"
-        :class="{'btn-success':(quote&&author),'btn-danger':(!(quote&&author))}"
+        :class="{'btn-success':(quote),'btn-danger':(!(quote))}"
         @click="addQuote"
-        :disabled="!(quote&&author)"
+        :disabled="!(quote)"
       >Добавить цитату</button>
     </div>
   </div>
@@ -35,11 +35,16 @@ export default {
   },
   methods: {
     addQuote() {
+      if (!author) {
+        this.author = "Unknown";
+      }
       const newQuote = {
         text: this.quote,
         author: this.author
       };
       this.$store.dispatch("addQuote", newQuote);
+      this.quote = "";
+      this.author = "";
     }
   }
 };
