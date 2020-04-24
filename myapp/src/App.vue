@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="container">
-    <div class="col-xs-6 col-xs-offset-3">
+  <div id="app">
+    <div class="container">
       <app-header></app-header>
       <router-view></router-view>
       <app-footer></app-footer>
@@ -23,7 +23,16 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 </style>

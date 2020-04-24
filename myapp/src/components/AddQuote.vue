@@ -1,22 +1,22 @@
 <template>
-  <div class="row">
-    <div class="panel">
+  <div class="main">
+    <div class="main-heading">
       <div class="panel-heading">
-        <h3 class="panel-title">Введите цитату и автора</h3>
+        <h3 class="main-heading__title">Введите цитату и автора</h3>
       </div>
-      <div class="panel-body">
+      <div class="main-heading__text">
         <p>Quote: {{quote}}</p>
         <input type="text" v-model="quote" />
       </div>
-      <div class="panel-body">
+      <div class="main-heading__text">
         <p>Author: {{author}}</p>
         <input type="text" v-model="author" />
       </div>
     </div>
     <div class="col-xs-offset-9">
       <button
-        class="btn"
-        :class="{'btn-success':(quote),'btn-danger':(!(quote))}"
+        class="button"
+        :class="{'green':(quote),'red':(!(quote))}"
         @click="addQuote"
         :disabled="!(quote)"
       >Добавить цитату</button>
@@ -51,8 +51,13 @@ export default {
 </script>
 
 <style scoped>
-.panel-body {
-  font-size: 24px;
-  color: #6e6e6e;
+.button {
+  color: black;
+}
+.green {
+  background-color: lightgreen;
+}
+.red {
+  background-color: rgb(209, 107, 107);
 }
 </style>

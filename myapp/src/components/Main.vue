@@ -1,17 +1,13 @@
 <template>
-  <div class="row">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-title">Нажмите на кнопку для генерации случайной цитаты</h3>
-      </div>
-      <div class="panel-body">{{quote.text}}</div>
-      <div class="col-xs-offset-6">
-        <div class="panel-body author">Author : {{quote.author}}</div>
-      </div>
+  <div class="main">
+    <div class="main-heading">
+      <h3 class="main-heading__title">Нажмите на кнопку для генерации случайной цитаты</h3>
     </div>
-    <div class="col-xs-offset-9">
-      <button class="btn btn-success" @click="updateQuote">Получить цитату</button>
-    </div>
+    <div class="main-text">{{quote.text}}</div>
+
+    <div class="main-author">Author : {{quote.author}}</div>
+
+    <button class="button" @click="updateQuote">Получить цитату</button>
   </div>
 </template>
 
@@ -34,10 +30,36 @@ export default {
 };
 </script>
 
-<style scoped>
-.panel-body {
+<style>
+.main {
   font-family: "Arizonia", cursive;
-  font-size: 2rem;
+
+  font-size: 1.5rem;
   color: #6e6e6e;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5%;
+}
+
+.main-heading {
+  margin: 1rem;
+}
+.main-text {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+.main-author {
+  margin: 1rem;
+}
+
+.button {
+  padding: 0.5rem;
+  float: right;
+  margin: 1rem 6rem;
+  background-color: lightgreen;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 </style>

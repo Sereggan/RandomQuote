@@ -1,15 +1,13 @@
 <template>
-  <div class="row">
-    <div class="col-xs-12">
-      <ul class="nav nav-tabs">
-        <router-link to="/" exactActiveClass="active" tag="li">
-          <a>Show Quotes</a>
-        </router-link>
-        <router-link to="/addQuote" activeClass="active" tag="li">
-          <a>Add quote</a>
-        </router-link>
-      </ul>
-    </div>
+  <div class="header">
+    <ul class="header__nav">
+      <router-link to="/" exactActiveClass="active" tag="li" class="header__nav__item">
+        <p>Show Quotes</p>
+      </router-link>
+      <router-link to="/addQuote" activeClass="active" tag="li" class="header__nav__item">
+        <p>Add quote</p>
+      </router-link>
+    </ul>
   </div>
 </template>
 
@@ -18,7 +16,32 @@ export default {};
 </script>
 
 <style>
-.row {
-  margin-bottom: 4rem;
+.header {
+  width: 100%;
+  margin: 2rem 0;
+}
+.header__nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.header__nav__item {
+  margin: 0 1rem;
+  padding: 1rem;
+
+  border-radius: 8%;
+  border: 1px solid lightblue;
+}
+.header__nav__item:hover,
+.active {
+  cursor: pointer;
+  background-color: lightcyan;
+}
+li {
+  list-style: none;
+}
+
+li:hover {
 }
 </style>
