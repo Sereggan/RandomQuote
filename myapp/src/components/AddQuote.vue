@@ -60,4 +60,12 @@ export default {
 .red {
   background-color: rgb(209, 107, 107);
 }
+@media (max-width: 1000px) {
+  input {
+    padding: 2em;
+    width: 30em;
+    border: 1px solid gray;
+    height: 2em;
+  }
+}
 </style>
